@@ -71,6 +71,9 @@
     .top_footer .news_form p { line-height: 1.7; }
     .faq .gg { bottom: -60px; right: 35px; max-width: 120px; }
 
+
+    
+
 }
 @media only screen and (max-width:1023px){
     .countdown .time-section { padding: 0px 29px; }
@@ -85,6 +88,7 @@
     .top_footer .news_form .col{margin-bottom: 15px;}
     .top_footer { padding: 50px 0; }
     .stay_touch { padding: 60px 0px; }
+    .popup-content video { width: 80vw; height: auto; }
 
 }
 @media only screen and (max-width:767px){
@@ -127,7 +131,6 @@
     .bottom_footer { padding: 15px; }
     .bottom_footer p { font-size: 14px; line-height: 14px; }
     .Let_repair h2{letter-spacing: 0;}
-
-
+    .popup-content video { width: 90vw; height: auto; }
 
 }

@@ -59,7 +59,7 @@
                         <div class="wrap d_flex d_flex_ac d_flex_jb">
                             <div class="left_col">
                                 <div class="bg" style="background-image: url(./images/lets.jpg);"></div>
-                                <img src="images/playicon.svg" alt="playicon" class="playicon">
+                                <img src="images/playicon.svg" data-url="images/video.mp4" alt="playicon" class="playicon">
                             </div>
                             <div class="right_col">
                                 <h2>Lasst uns <strong>gemeinsam</strong> die Zukunft reparieren!</h2>
@@ -115,6 +115,15 @@
                 </section>
             </div>
             <div class="push"><!-- --></div>            
+        </div>
+        <!-- Popup Container -->
+        <div id="videoPopup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <video id="popupVideo" controls autoplay muted>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
         </div>
         <!-- FOOTER -->
          <footer>

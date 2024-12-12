@@ -67,6 +67,22 @@ function startCountdown(targetDate) {
 const targetDate = new Date('2024-12-31T23:59:59').getTime();
 startCountdown(targetDate);
 
+/* popup video */
+
+$('.playicon').click(function(){
+  $('.popup').addClass('visible');
+  var _url = $(this).attr('data-url');
+console.log(_url);  
+$('#popupVideo').attr('src', _url);
+
+});
+$('.close-btn').click(function(){
+  $('.popup').removeClass('visible');
+  $('#popupVideo').attr('src','');
+});
+
+
+
 
 });
 
@@ -81,3 +97,5 @@ window.addEventListener("scroll", function () {
   parallax.style.backgroundPositionY = offset * 0.7 + "px";
   // DIV 1 background will move slower than other elements on scroll.
 });
+
+
