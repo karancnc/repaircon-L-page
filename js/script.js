@@ -1,13 +1,13 @@
-/* Window Load functions */
-
-jQuery(window).load(function($){
-    
+jQuery(window).on('load', function() {
+  setTimeout(function() {
+    jQuery('.banner .animation_sec').addClass('come-in');
+    setTimeout(function() {
+      jQuery('.countdown.animation_sec').addClass('come-in');
+    }, 300); // Delay for the second animation
+  }, 300); // Initial delay before first animation
 });
 
-
 jQuery(document).ready(function($){
-
-  
 
     /* megnify */
     $('[data-pop="megnify"]').each(function(){
@@ -81,14 +81,8 @@ $('.close-btn').click(function(){
   $('#popupVideo').attr('src','');
 });
 
-
-
-
 });
 
-jQuery(window).resize(function($){
-
-});
 const parallax = document.getElementById("parallax");
 
 // Parallax Effect for DIV 1
@@ -99,3 +93,31 @@ window.addEventListener("scroll", function () {
 });
 
 
+(function($)
+ {
+  $.fn.visible = function(partial) {
+
+      var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          bottom       = _top + $t.height(),
+          compareTop    = partial === true ? bottom : _top,
+          compareBottom = partial === true ? _top : bottom;
+
+      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+  };
+})(jQuery);
+var win = $(window);
+var allMods = $(".animation_sec");
+win.scroll(function(event) {
+  allMods.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+          setTimeout(function(){
+              el.addClass("come-in"); 
+          },i*50);
+      } 
+  });
+});
